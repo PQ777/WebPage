@@ -7,7 +7,7 @@ function checkLogin()
     {
         document.getElementById("message").innerText = "로그인 성공";
         window.location.href = "login.html";
-    }
+    }    
     else
     {
         document.getElementById("message").innerText = "로그인 실패";
