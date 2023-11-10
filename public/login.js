@@ -1,16 +1,39 @@
 function checkLogin()
 {
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
+    var emailInput = document.getElementById("emailInput").value;
+    var passwordInput = document.getElementById("passwordInput").value;
 
-    if(username == "a" && password == "a")
+    if(emailInput == "user@example.com" && passwordInput == "password")
     {
-        document.getElementById("message").innerText = "로그인 성공";
-        window.location.href = "login.html";
+        alert("login success");
+        window.location.href = "main.html";
     }    
     else
     {
-        document.getElementById("message").innerText = "로그인 실패";
-        window.location.href = "login.html";
+        alert("login fail");
     }
+}
+
+function updateClock()
+{
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+    var date = now.toDateString();
+
+    hours = hours < 10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    var clockElement = document.getElementById("digital-clock");
+    clockElement.innerHTML = `${hours}:${minutes}:${seconds} <br> ${date}`;
+}
+
+
+setInterval(updateClock, 1000);
+
+window.onload = function()
+{
+    updateClock();
 }

@@ -1,47 +1,106 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    text-align: center;
+/* CSS 리셋 코드로 기본 스타일 초기화 */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
-    background-color: #333;
+/* 전체 페이지 스타일 */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #3494e6, #ec6ead); /* 그라데이션 색상 조절 가능 */
+    transition: background 1s ease; /* 트랜지션 속성 설정 (속성, 지속 시간, 가속도) */
+}
+
+/*디지털 시계*/
+#digital-clock
+{
+    font-size: 2em;
+    text-align: center;
     color: #fff;
-    padding: 10px;
+    margin-top: 20px;
+    white-space: pre-line; /*줄 바꿈*/
 }
 
-form {
-    background-color: #fff;
-    border: 1px solid #ccc;
+
+/* 로그인 섹션 스타일 */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+
+}
+
+/* 로그인 폼 박스 스타일 */
+.form-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* 로그인 폼 값 스타일 */
+.form-value {
     padding: 20px;
-    margin: 20px auto;
-    max-width: 300px;
+}
+
+/* 로그인 폼 스타일 */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 입력 상자 스타일 */
+.inputbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+    margin-left: 10px;
+    color: #333;
 }
 
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+/* 잊어버린 비밀번호 스타일 */
+.forget {
+    margin-bottom: 15px;
 }
 
-input[type="button"] {
-    background-color: #333;
+/* 로그인 버튼 스타일 */
+button {
+    background-color: #007bff;
     color: #fff;
+    padding: 10px;
     border: none;
-    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-input[type="button"]:hover {
-    background-color: #555;
+/* 회원가입 문구 스타일 */
+.register {
+    text-align: center;
+}
+
+/* 메시지 스타일 */
+#message {
+    text-align: center;
+    margin-top: 15px;
+    color: #007bff;
+}
+
+/* ionicons 아이콘 스타일 */
+ion-icon {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #333;
 }
